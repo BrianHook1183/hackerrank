@@ -1,13 +1,20 @@
 /*
-Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+https://www.hackerrank.com/challenges/mini-max-sum/problem
+
+Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated integers.
 
 Example
+let arr = [1, 2, 3, 4, 5];
 
-The minimum sum is  and the maximum sum is . The function prints
+The function prints
 
 16 24
 */
 
+
+// Quickest solution for me was to sort the array which would locate the smallest and largest integer.
+// Then, the two sums are easy to calculate by looping through their respective portions of the array.
+// The time complexity of .sort() is O(n log n)
 function miniMaxSum(arr) {
   let sortedArr = arr.sort();
 
@@ -23,3 +30,8 @@ function miniMaxSum(arr) {
 
   console.log(`${minSum} ${maxSum}`);
 }
+
+// Another way to solve it:
+/* function miniMaxSum(arr) {
+ 
+} */
