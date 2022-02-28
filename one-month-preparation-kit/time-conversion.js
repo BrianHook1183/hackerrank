@@ -1,6 +1,14 @@
-function timeConversion(s) {
-  // Write your code here
+//* Convert 12-hour clock time string to 24-hour clock time strong
+/* 
+Example
+s = "12:01:00PM"
+Return "12:01:00"
 
+s = "12:01:00AM"
+Return "00:01:00"
+ */
+
+function timeConversion(s) {
   let milHH = "00";
   let milMM = "00";
   let milSS = "00";
