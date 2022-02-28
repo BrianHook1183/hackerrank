@@ -1,4 +1,4 @@
-//* Convert 12-hour clock time string to 24-hour clock time strong
+//* Convert 12-hour clock time string to 24-hour clock time string
 /* 
 Example
 s = "12:01:00PM"
