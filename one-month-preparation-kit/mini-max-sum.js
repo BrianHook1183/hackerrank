@@ -11,7 +11,6 @@ The function prints
 16 24
 */
 
-
 // Quickest solution for me was to sort the array which would locate the smallest and largest integer.
 // Then, the two sums are easy to calculate by looping through their respective portions of the array.
 // The time complexity of .sort() is O(n log n)
@@ -31,7 +30,19 @@ function miniMaxSum(arr) {
   console.log(`${minSum} ${maxSum}`);
 }
 
-// Another way to solve it:
-/* function miniMaxSum(arr) {
- 
-} */
+// Another way to solve it without sort():
+function miniMaxSum(arr) {
+  let arrSum = 0;
+
+  arr.forEach((int) => {
+    arrSum += int;
+  });
+
+  let intMax = Math.max(...arr);
+  let intMin = Math.min(...arr);
+
+  let minSum = arrSum - intMax;
+  let maxSum = arrSum - intMin;
+
+  console.log(`${minSum} ${maxSum}`);
+}
